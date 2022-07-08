@@ -1,0 +1,47 @@
+@layout('layouts.app')
+
+@section('content')
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('assets/img/home-bg.jpg')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="page-heading">
+                    <h1>My Blog</h1>
+                    <span class="subheading">From Hiiu with love</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+  <!-- Main Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      @each(post in posts)
+      <div class="post-preview">
+        <a href="/post/{{ post._id }}">
+          <h2 class="post-title">
+            {{ post.title }}
+          </h2>
+        </a>
+        <p class="post-meta">Posted by
+          <a href="#">{{ post.username }}</a>
+          on {{ post.createdAt.toDateString() }}
+        </p>
+      </div>
+      <hr>
+      @endeach
+      <!-- Pager -->
+      <div class="clearfix">
+        <a class="btn btn-primary float-right" href="#">Older Posts →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+@endsection 
+ 
+ 
