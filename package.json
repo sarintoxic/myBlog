@@ -2,8 +2,8 @@
 {
   
   "name": "myblog",
-  "version": "1.0.0",
-  "description": "My Blog using NodeJs",
+  "version": "1.0.1",
+  "description": "My Blog using NodeJs and MongoDB",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
